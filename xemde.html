@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bấm vào đê</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(270deg, #ff6ec4, #7873f5, #4facfe);
+            background-size: 600% 600%;
+            animation: gradientBG 10s ease infinite;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        h1 {
+            font-size: 50px;
+            color: white;
+            text-align: center;
+            animation: bounce 1s infinite alternate, glow 2s infinite;
+        }
+
+        @keyframes bounce {
+            from { transform: translateY(0px); }
+            to { transform: translateY(-30px); }
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px white; }
+            50% { text-shadow: 0 0 30px yellow; }
+            100% { text-shadow: 0 0 10px white; }
+        }
+
+        button {
+            position: absolute;
+            bottom: 50px;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            background: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.2);
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="text">thôi đm mai tao không đi nữa đou 😏</h1>
+
+    <button onclick="troll()">Bấm vào đây đi 👀</button>
+
+    <script>
+        function troll() {
+            let text = document.getElementById("text");
+            text.innerHTML = "Đùa tí hehe 😆😆";
+            text.style.color = "red";
+
+            // làm chữ chạy lung tung
+            setInterval(() => {
+                text.style.position = "absolute";
+                text.style.left = Math.random() * window.innerWidth + "px";
+                text.style.top = Math.random() * window.innerHeight + "px";
+            }, 500);
+        }
+    </script>
+
+</body>
+</html>
