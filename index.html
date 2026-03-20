@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Bấm vào đê</title>
+    <title>Thử đọc cái này xem</title>
     <style>
         body {
             margin: 0;
@@ -61,22 +61,13 @@
 </head>
 <body>
 
-    <h1 id="text">thôi đm mai tao không đi nữa đou 😏</h1>
+    <h1 id="text">thế thử đọc cái này xem🙄</h1>
 
-    <button onclick="troll()">Bấm vào đây đi 👀</button>
+    <button onclick="goLink()">Bấm vào đây đi 👀</button>
 
     <script>
-        function troll() {
-            let text = document.getElementById("text");
-            text.innerHTML = "Đùa tí hehe 😆😆";
-            text.style.color = "red";
-
-            // làm chữ chạy lung tung
-            setInterval(() => {
-                text.style.position = "absolute";
-                text.style.left = Math.random() * window.innerWidth + "px";
-                text.style.top = Math.random() * window.innerHeight + "px";
-            }, 500);
+        function goLink() {
+            window.location.href = "https://file.nhasachmienphi.com/pdf/nhasachmienphi-doc-vi-bat-ky-ai-de-khong-bi-lua-doi-va-loi-dung.pdf";
         }
     </script>
 
